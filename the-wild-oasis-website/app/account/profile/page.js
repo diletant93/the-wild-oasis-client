@@ -1,6 +1,10 @@
 import SelectCountry from "@/app/_components/SelectCountry";
 import Image from "next/image";
 
+export const metadata={
+    title:'Profile / The Wild Oasis'
+}
+
 export default function Page() {
   // CHANGE
   const countryFlag = "pt.jpg";
