@@ -1,14 +1,18 @@
 import ReservationCard from "@/app/_components/ReservationCard";
+import { auth } from "../_lib/auth";
 export const metadata = {
     title:'Account',
 }
 
-export default function Page() {
+export default async function Page() {
   // CHANGE
   const bookings = [];
-
+  const session = await auth()
   return (
     <div>
+      <h1 className="font-semibold text-3xl text-accent-400 mb-7">
+        Welcome {session.user.name.split(' ').at(0)}
+      </h1>
       <h2 className="font-semibold text-2xl text-accent-400 mb-7">
         Your reservations
       </h2>
